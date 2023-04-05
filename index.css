@@ -1,4 +1,4 @@
-@import "./fonts/stylesheet.css";
+@import "/fonts/stylesheet.css";
 
 * {
     box-sizing: border-box;
@@ -14,8 +14,7 @@ body {
     height: 100vh;
     align-items: center;
     justify-content: center;
-    background: #E1E3E6;
-    border: 1px solid #E1E3E6;
+    background: #F0F0F1;
     font-family: "Campton", sans-serif;
 }
 
@@ -34,9 +33,10 @@ hr:first-child {
     width: 494px;
     height: 446px;
     background-color: white;
-    padding: 20px;
+    padding: 17px 20px;
     border-radius: 14px;
     box-shadow: 9px 32px 35px 0px #0000000C;
+    border: 1px solid #E1E3E6;
 }
 
 .form__content {
@@ -53,7 +53,7 @@ hr:first-child {
     height: 250px;
     overflow: auto;
     margin-top: 15px;
-    padding-top: 6px;
+    padding-top: 8px;
 }
 
 .form__controls span {
@@ -81,7 +81,6 @@ hr:first-child {
     margin: 0 15px 0 0;
     height: 22px;
     width: 22px;
-    background: red;
 }
 
 .form__search {
@@ -123,6 +122,7 @@ button[type="submit"] {
     display: block;
     margin-left: auto;
     cursor: pointer;
+    transform: translateX(2px);
 }
 
 
@@ -197,7 +197,7 @@ input:checked + .slider:before {
     font-size: 16px;
     color: #343434;
     position: relative;
-    padding-left: 37px;
+    padding-left: 36px;
     margin-bottom: 5px;
     padding-top: 0px;
     cursor: pointer;
@@ -266,7 +266,7 @@ input:checked + .slider:before {
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-    width: 16px;
+    width: 14px;
 }
 
 *::-webkit-scrollbar-track {

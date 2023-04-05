@@ -10,25 +10,38 @@
 <body>
     <div id="root">
         <form class="form">
-            <input class="form__search" placeholder="Search" type="text" />
+            <input 
+                v-model="search"
+                id="search" 
+                class="form__search" 
+                placeholder="Search" 
+                type="text" />
             <hr />
             <div class="form__content">
-            <div class="form__controls">
-                <div>
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                    </label>
-                    <span>Show selected only</span>
+                <div class="form__controls">
+                    <div>
+                        <label class="switch" >
+                            <input v-model="onlySelected" id="switcher" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <span>Show selected only</span>
+                    </div>
+                    <span @click="clear" style="cursor: pointer">Clear all</span>
                 </div>
-                <span>Clear all</span>
-            </div>
-            <div id="countries" class="form__list"></div>
+                <div id="countries" class="form__list">
+                    <country 
+                        :search="search" 
+                        :only-selected="onlySelected" 
+                        :key="`list_c_${ index }`" :data="item"
+                        v-for="(item, index) in countries" 
+                    />
+                </div>
             </div>
             <hr>
             <button type="submit">Save</button>
         </form>
     </div>
-    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <script async src="index.js"></script>
 </body>
 </html>
