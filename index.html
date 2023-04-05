@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Countries</title>
+</head>
+<body>
+    <div id="root">
+        <form class="form">
+            <input class="form__search" placeholder="Search" type="text" />
+            <hr />
+            <div class="form__content">
+            <div class="form__controls">
+                <div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Show selected only</span>
+                </div>
+                <span>Clear all</span>
+            </div>
+            <div id="countries" class="form__list"></div>
+            </div>
+            <hr>
+            <button type="submit">Save</button>
+        </form>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
