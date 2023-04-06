@@ -56,10 +56,10 @@ hr:first-child {
 .form__list {
     height: 250px;
     overflow: auto;
-    margin-top: 15px;
+    margin-top: 25px;
     padding-top: 8px;
-    transform: translate(-2px, -1.5px);
-    width: calc(100% + 1px);
+    transform: translate(-2px, -2px);
+    width: calc(100% - 2px);
 }
 
 .form__info {
@@ -76,6 +76,7 @@ hr:first-child {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    transform: translate(0px, -10px)
 }
 
 .form__clear {
@@ -299,7 +300,7 @@ input:checked + .slider:before {
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-    width: 14px;
+    width: 8px;
 }
 
 *::-webkit-scrollbar-track {
@@ -308,6 +309,6 @@ input:checked + .slider:before {
 
 *::-webkit-scrollbar-thumb {
     background-color: rgba(52, 52, 52, 0.51);;
-    border-radius: 10px;
-    border: 3px solid #ffffff;
+    border-radius: 4px;
+    width: 8px;
 }
