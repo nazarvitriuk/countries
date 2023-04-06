@@ -16,7 +16,6 @@
                 class="form__search" 
                 placeholder="Search" 
                 type="text" />
-            <hr />
             <div class="form__content">
                 <div class="form__controls">
                     <div>
@@ -24,9 +23,9 @@
                             <input v-model="onlySelected" id="switcher" type="checkbox">
                             <span class="slider round"></span>
                         </label>
-                        <span>Show selected only</span>
+                        <span class="form__info">Show selected only</span>
                     </div>
-                    <span @click="clear" style="cursor: pointer">Clear all</span>
+                    <span @click="clear" class="form__clear">Clear all</span>
                 </div>
                 <div id="countries" class="form__list">
                     <country 
@@ -37,8 +36,9 @@
                     />
                 </div>
             </div>
-            <hr>
-            <button type="submit">Save</button>
+            <button type="submit">
+                <span>Save</span>
+            </button>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>

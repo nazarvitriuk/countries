@@ -58,7 +58,7 @@ const countries = [
 Vue.component('country', {
     template: ('<div class="form__item" v-if="show && searched">' +
         '<label class="control control-checkbox">' + 
-            '{{ data.name }}' +
+            '<span>{{ data.name }}</span>' +
             '<input v-model="isSelected" class="country-input" type="checkbox" />' +
             '<div class="control_indicator"></div>' +
         '</label>' +

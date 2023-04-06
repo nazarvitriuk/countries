@@ -32,21 +32,25 @@ hr:first-child {
 .form {
     width: 494px;
     height: 446px;
-    background-color: white;
-    padding: 17px 20px;
+    padding: 17px 20px 20px 21px;
     border-radius: 14px;
-    box-shadow: 9px 32px 35px 0px #0000000C;
+    background: #FFFFFF;
     border: 1px solid #E1E3E6;
+    box-shadow: 9px 32px 35px rgba(0, 0, 0, 0.0464653);
 }
 
 .form__content {
-    padding: 23px 0 15px 0;
+    height: 317.1px;
+    border-top: 1px solid #ECECEC;
+    border-bottom: 1px solid #ECECEC;
+    padding-top: 23.7px;
 }
 
 .form__controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transform: translateX(-2px);
 }
 
 .form__list {
@@ -54,9 +58,27 @@ hr:first-child {
     overflow: auto;
     margin-top: 15px;
     padding-top: 8px;
+    transform: translate(-2px, -1.5px);
+    width: calc(100% + 1px);
 }
 
-.form__controls span {
+.form__info {
+    font-family: 'Campton';
+    font-style: normal;
+    font-weight: 550;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.5px;
+    color: #232323;
+}
+
+.form__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form__clear {
     font-family: 'Campton';
     font-style: normal;
     font-weight: 550;
@@ -69,12 +91,7 @@ hr:first-child {
     /* Black */
 
     color: #232323;
-}
-
-.form__item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+    transform: translateX(2px);
 }
 
 .form__item input {
@@ -91,10 +108,11 @@ hr:first-child {
     font-family: 'Campton';
     font-style: normal;
     font-weight: 475;
-    padding-left: 4px;
+    padding-left: 2.5px;
     line-height: 19px;
     letter-spacing: -0.5px;
     margin-bottom: 12px;
+    color: #343434;
 }
 
 .form input::placeholder {
@@ -104,6 +122,8 @@ hr:first-child {
     font-size: 16px;
     line-height: 19px;
     letter-spacing: -0.5px;
+    
+    color: #343434;
 }
 
 button[type="submit"] {
@@ -118,11 +138,21 @@ button[type="submit"] {
     line-height: 1px;
     color: white;
     border: none;
-    margin-top: 10px;
     display: block;
     margin-left: auto;
     cursor: pointer;
-    transform: translateX(2px);
+    margin-top: 20px;
+    margin-left: auto;
+    cursor: pointer;
+    transform: translateX(1px);
+    position: relative;
+}
+
+button[type="submit"] span {
+    position: absolute;
+    left: 25px;
+    top: 17px;
+    letter-spacing: -0.5px;
 }
 
 
@@ -147,7 +177,7 @@ button[type="submit"] {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background: rgba(0, 28, 61, 0.08);
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -155,8 +185,8 @@ button[type="submit"] {
 .slider:before {
     position: absolute;
     content: "";
-    height: 19px;
-    width: 19px;
+    height: 19.16px;
+    width: 19.59px;
     left: 2px;
     bottom: 2px;
     background-color: white;
@@ -202,6 +232,9 @@ input:checked + .slider:before {
     padding-top: 0px;
     cursor: pointer;
     font-size: 16px;
+}
+.control span {
+    transform: translate(1px, 1px);
 }
 .control input {
     position: absolute;
